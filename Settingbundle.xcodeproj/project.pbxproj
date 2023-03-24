@@ -11,6 +11,8 @@
 		506683EA29CD9CAE00095051 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506683E929CD9CAE00095051 /* ContentView.swift */; };
 		506683EC29CD9CAF00095051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506683EB29CD9CAF00095051 /* Assets.xcassets */; };
 		506683EF29CD9CAF00095051 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506683EE29CD9CAF00095051 /* Preview Assets.xcassets */; };
+		506683F629CD9CEE00095051 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 506683F529CD9CEE00095051 /* Settings.bundle */; };
+		506683F929CDADA600095051 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506683F829CDADA600095051 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		506683E929CD9CAE00095051 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		506683EB29CD9CAF00095051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		506683EE29CD9CAF00095051 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		506683F529CD9CEE00095051 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		506683F829CDADA600095051 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		506683FA29CDB1A100095051 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 		506683DB29CD9CAE00095051 = {
 			isa = PBXGroup;
 			children = (
+				506683FA29CDB1A100095051 /* README.md */,
 				506683E629CD9CAE00095051 /* Settingbundle */,
 				506683E529CD9CAE00095051 /* Products */,
 			);
@@ -51,10 +57,11 @@
 		506683E629CD9CAE00095051 /* Settingbundle */ = {
 			isa = PBXGroup;
 			children = (
+				506683F729CDAD9600095051 /* ContentView */,
 				506683E729CD9CAE00095051 /* SettingbundleApp.swift */,
-				506683E929CD9CAE00095051 /* ContentView.swift */,
 				506683EB29CD9CAF00095051 /* Assets.xcassets */,
 				506683ED29CD9CAF00095051 /* Preview Content */,
+				506683F529CD9CEE00095051 /* Settings.bundle */,
 			);
 			path = Settingbundle;
 			sourceTree = "<group>";
@@ -65,6 +72,15 @@
 				506683EE29CD9CAF00095051 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		506683F729CDAD9600095051 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				506683E929CD9CAE00095051 /* ContentView.swift */,
+				506683F829CDADA600095051 /* ContentViewModel.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506683EF29CD9CAF00095051 /* Preview Assets.xcassets in Resources */,
+				506683F629CD9CEE00095051 /* Settings.bundle in Resources */,
 				506683EC29CD9CAF00095051 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +156,7 @@
 			files = (
 				506683EA29CD9CAE00095051 /* ContentView.swift in Sources */,
 				506683E829CD9CAE00095051 /* SettingbundleApp.swift in Sources */,
+				506683F929CDADA600095051 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.machx20.settingsbundle.Settingbundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -308,7 +326,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.machx20.settingsbundle.Settingbundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
