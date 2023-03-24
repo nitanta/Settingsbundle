@@ -11,6 +11,7 @@ import Combine
 struct ContentView: View {
 
     @StateObject var viewModel = ContentViewModel()
+    @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
         NavigationView {
@@ -19,7 +20,7 @@ struct ContentView: View {
                 Section(header: Text(Constants.action)) {
                                         
                     Picker(selection: $viewModel.locationIndex, label: Text(Constants.selectLocation)) {
-                        ForEach(0 ..< viewModel.locationOptions.count) {
+                        ForEach(0 ..< viewModel.locationOptions.count, id: \.self) {
                             Text(viewModel.locationOptions[$0])
                         }
                     }
@@ -45,6 +46,18 @@ struct ContentView: View {
                 
             }
             .navigationBarTitle(Constants.title)
+            .onChange(of: scenePhase) { newPhase in
+                switch newPhase {
+                case .active:
+                    viewModel.locationIndex = Int(viewModel.locationItem) ?? 0
+                case .inactive:
+                    viewModel.locationItem = String(viewModel.locationIndex)
+                case .background:
+                    debugPrint("Background")
+                @unknown default:
+                    break
+                }
+            }
         }
     }
 }

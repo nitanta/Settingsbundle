@@ -12,7 +12,8 @@ import SwiftUI
 final class ContentViewModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     
-    @AppStorage("select_location") var locationIndex: Int = 0
+    @Published var locationIndex: Int = 0
+    @AppStorage("select_location") var locationItem: String = "0"
     var locationOptions = ["KATHMANDU", "MUMBAI", "BANGKOK"]
     @AppStorage("username") var username: String = ""
     @AppStorage("level") var level: Double = 0
